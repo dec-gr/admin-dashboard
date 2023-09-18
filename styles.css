@@ -13,7 +13,6 @@ ul {
 
 .container {
   background-color: #bcd0231e;
-  border: solid black 2px;
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 5fr;
@@ -22,7 +21,6 @@ ul {
 
 .header {
   background-color: white;
-  border: solid black 2px;
   display: grid;
   grid-template: 1fr 1.5fr / 1fr;
 }
@@ -60,6 +58,7 @@ ul {
 .header-bottom {
   display: grid;
   grid: 1fr 1fr / 1fr 5fr 1fr 1fr 1fr;
+  padding-bottom: 4px;
 }
 
 .header-bottom > .head-button,
@@ -115,21 +114,15 @@ ul {
   border: solid black 0.25px;
 }
 
-.header div {
-  border: solid black 1px;
-}
-
 .sidebar {
   background-color: var(--blue);
   color: white;
-  border: solid black 2px;
   grid-row: 1 / -1;
   display: grid;
   grid-template-rows: 5rem 20rem 1fr;
 }
 
 .sidebar > div {
-  border: solid black 1px;
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -153,9 +146,8 @@ ul {
 
 .main {
   background-color: rgb(221, 229, 237);
-  border: solid black 2px;
   display: grid;
-  grid-template: 1rem 5fr 1fr 5fr/ 3fr 1fr;
+  grid-template: 1rem 5fr 1rem 5fr/ 3fr 1fr;
   gap: 15px;
   padding: 15px;
 }
@@ -164,22 +156,36 @@ ul {
   grid-row: 2/5;
   display: grid;
   /* grid-template: 1fr 1fr / 1fr 1fr 1fr; */
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-template-rows: repeat(2, 1fr);
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* grid-template-rows: repeat(2, 1fr); */
+  gap: 10px;
 }
 
 .projects-container .card {
   background-color: #ffffff;
   color: black;
   text-align: left;
-  height: 8rem;
+  height: 10rem;
   padding: 15px;
-  overflow: auto;
+  border-left: 5px solid #4895ff;
+  display: grid;
+  border-radius: 8px;
+  max-width: 20rem;
 }
 
 .projects-container .card {
   font-size: 0.8rem;
+}
+
+.card-buttons {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: right;
+  gap: 6px;
+}
+
+.card-content {
+  overflow: scroll;
 }
 
 .projects-container .title {
@@ -192,6 +198,10 @@ ul {
   color: black;
   text-align: left;
   font-size: 0.7rem;
+  padding: 10px;
+  border-radius: 8px;
+  display: grid;
+  gap: 10px;
 }
 
 .announcements-container .title {
@@ -202,17 +212,35 @@ ul {
   display: grid;
   grid-template: 1fr 1fr 1fr 1fr;
   background-color: white;
-  gap: 2px;
+  color: black;
+  text-align: left;
+  border-radius: 8px;
+  padding: 20px;
+  gap: 10px;
 }
+
+/* .projects-container .card {
+  background-color: #ffffff;
+  color: black;
+  text-align: left;
+  height: 10rem;
+  padding: 15px;
+  border-left: 5px solid #4895ff;
+  display: grid;
+  border-radius: 8px;
+  max-width: 20rem;
+} */
 
 .trending-user {
   display: grid;
   grid-template: 1fr 1fr / 1fr 4fr;
-  border: solid black 1px;
+  /* border: solid black 1px; */
+  font-size: 15px;
 }
 
 .trending-user .picture {
   grid-row: 1 / -1;
+  margin-right: 4px;
 }
 
 .user-icon {
@@ -221,4 +249,10 @@ ul {
 
 .click-icon {
   width: 1.5rem;
+}
+
+/* // Size can also be negative; see how it's smaller than the element */
+.raise:hover {
+  box-shadow: 0 0.5em 0.5em -0.4em 100;
+  transform: translateY(-0.25em);
 }
