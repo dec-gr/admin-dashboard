@@ -326,3 +326,8 @@ ul {
   box-shadow: 0 0.5em 0.5em -0.4em 100;
   transform: translateY(-0.25em);
 }
+
+.main-subtitle {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
